@@ -8,16 +8,23 @@ export class App extends Component {
   bad: 0
 }
  
-  handleClick = e => {
-    this.setState({})
-  }
- 
+  handleClick = (type) => {
+    this.setState((prevState) => ({
+      [type]: prevState[type] + 1,
+    }));
+  };
+
  
  
   render() {
     return (
       <div>
-        <Feedback></Feedback>
+        <Feedback
+          handleClick={this.handleClick}
+          good={this.state.good}
+          neutral={this.state.neutral}
+          bad={this.state.bad}
+        ></Feedback>
     </div>
   )
 }
