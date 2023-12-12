@@ -1,0 +1,16 @@
+.feedback_container {
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+.btn_list {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+}
+
+
+.btn {
+cursor: pointer;
+padding: 5px 7px;
+}
