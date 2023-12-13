@@ -9,14 +9,15 @@ const Statistics = ({
         <h2>Statistics</h2>
         <div>
           <p>
-            Cood: <span className="good">{good}</span>
+            Cood: <span className={css.good}>{good}</span>
           </p>
           <p>
             Neutral: <span className="neutral">{neutral}</span>
           </p>
           <p>
             Bad: <span className="bad">{bad}</span>
-          </p>
+                </p>
+                
           <p>
             Total: <span className="total">{total}</span>
           </p>

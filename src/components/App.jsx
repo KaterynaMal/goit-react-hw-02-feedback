@@ -1,8 +1,9 @@
 import { Component } from 'react';
-import { Feedback } from './Feedback';
+// import { Feedback } from './Feedback';
 import { Statistics } from './Statistics';
-// import { FeedbackOptions } from './FeedbackOptions';
+import { FeedbackOptions } from './FeedbackOptions';
 import { SectionTitle } from './SectionTitle';
+import css from './Feedback.module.css';
 
 export class App extends Component {
   state = {
@@ -19,14 +20,13 @@ export class App extends Component {
 
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
-   return good + neutral + bad;
-  } 
+    return good + neutral + bad;
+  };
 
   countPositiveFeedbackPercentage = () => {
     const total = this.countTotalFeedback();
     const { good } = this.state;
     return total === 0 ? 0 : Math.round((good / total) * 100);
-   
   };
 
   render() {
@@ -34,19 +34,10 @@ export class App extends Component {
     const total = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage();
     return (
-      <div>
+      <div className={css.feedback_container}>
         <SectionTitle title="Please leave feedback">
-          {/* <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={total}
-          positivePercentage={positivePercentage}
-        ></Statistics> */}
-
-       </SectionTitle>
-        <Feedback
-          handleClick={this.handleClick}></Feedback>
+ <FeedbackOptions handleClick={this.handleClick}></FeedbackOptions>
+       
         <Statistics
           good={good}
           neutral={neutral}
@@ -54,9 +45,20 @@ export class App extends Component {
           total={total}
           positivePercentage={positivePercentage}
         ></Statistics>
-          
-        
+        </SectionTitle>
+
+       
       </div>
     );
   }
 }
+
+
+
+//  <Feedback
+//           handleClick={this.handleClick}
+//         good={good}
+//           neutral={neutral}
+//           bad={bad}
+//           total={total}
+//           positivePercentage={positivePercentage}></Feedback>

@@ -1,7 +1,9 @@
 import React from 'react';
 import css from './Feedback.module.css';
 
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+
+// options, onLeaveFeedback
+const FeedbackOptions = ({  handleClick}) => {
   return (
     <div>
       <div className={css.btn_list}>
