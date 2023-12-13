@@ -13,4 +13,6 @@
 .btn {
 cursor: pointer;
 padding: 5px 7px;
+background-color:rgb(249, 246, 246);
+border-color: rgb(211, 209, 209);
 }
