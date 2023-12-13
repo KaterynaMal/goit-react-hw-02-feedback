@@ -1,14 +1,12 @@
-import React from "react";
-// import css from './Feedback.module.css';
+import React from 'react';
 
-const SectionTitle = ({
-    title
-}) => {
-  return(
-      <div>
-          <h2>{title}</h2>
-        </div>
-    )
-}
-  
+const SectionTitle = ({ title, children }) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      {children}
+    </div>
+  );
+};
+
 export { SectionTitle };
