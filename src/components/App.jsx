@@ -43,9 +43,11 @@ export class App extends Component {
           <FeedbackOptions
             onLeaveFeedback={this.handleClick}
             options={options}
-          ></FeedbackOptions>
+          />
+        </SectionTitle>
+        <SectionTitle title="Feedback Statistics">
           {total === 0 ? (
-            <Notification message="There is no feedback"></Notification>
+            <Notification message="There is no feedback" />
           ) : (
             <Statistics
               good={good}
@@ -53,7 +55,7 @@ export class App extends Component {
               bad={bad}
               total={total}
               positivePercentage={positivePercentage}
-            ></Statistics>
+            />
           )}
         </SectionTitle>
       </div>
